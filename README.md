@@ -1,6 +1,8 @@
 # Django Blog project
 Small and simple blog-like project which has helped me to get started and learn how to get things done with Django.
 
+![alt text](https://github.com/le55coff33/django_blog_project/blob/master/image.png)
+
 When I was creating this project I was focused only on backend side of the project. I have learned how to:
 - handling request-response flow
 - dealing with Model View Template architectural pattern
