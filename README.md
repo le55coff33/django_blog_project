@@ -6,24 +6,22 @@ Small and simple blog-like project which has helped me to get started and learn 
 When I was creating this project I was focused only on backend side of the project. I have learned how to:
 - handling request-response flow
 - dealing with Model View Template architectural pattern
-- dealing with forms
 - creating function based views and generic class based views
 - working with forms
+- extend User Model
 - handling Django's signals
 
 #### This project is not intended for production.
 
 ## Features
 1. Registration of new users
-2. Extended User Model
-3. Every logged user can:
+2. Every logged user can:
 - Add posts and comments
 - Edit and Delete their own posts and comments
-4. Flash messages (Create, Update, Delete posts and comments)
+3. Flash messages (Create, Update, Delete posts and comments)
 
 ## To do
 - Tests
-- Upgrade profile page
 - Ability to follow other users
 
 ## Getting Started
