@@ -1,5 +1,14 @@
 # Django Blog project
-Small and simple blog-like project which helps me to get started and learn how to get things done with Django.
+Small and simple blog-like project which has helped me to get started and learn how to get things done with Django.
+
+When I was creating this project I was focused only on backend side of the project. I have learned how to:
+- handling request-response flow
+- dealing with Model View Template architectural pattern
+- dealing with forms
+- creating function based views and generic class based views
+- working with forms
+- handling Django's signals
+
 #### This project is not intended for production.
 
 ## Features
