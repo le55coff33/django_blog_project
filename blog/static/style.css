@@ -1,0 +1,12 @@
+body {
+padding-top: 56px;
+}
+
+a{
+color:#343a40;
+}
+
+a:hover {
+color: #23272b;
+text-decoration: none;
+}

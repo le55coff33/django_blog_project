@@ -1,0 +1,49 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<br>
+<!-- Blog Post -->
+<div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h2>
+      <p class="card-text">{{ post.post_body }}</p>
+    </div>
+    <div class="card-footer text-muted">
+      <p style="text-align:left;">
+        <img class="rounded-circle" src="{{post.author.profile.image.url}}" height="40" width="40">
+        Posted on {{ post.date_posted }} by <a href="#">{{ post.author }}</a>
+        {% if user.is_authenticated and post.author == user %}
+          <a href="{{ post.get_absolute_url_to_update}}" class="btn btn-dark">Edit</a>
+          <a href="{{ post.get_absolute_url_to_delete}}" class="btn btn-danger">Delete</a>
+        {% endif %}
+      <span style="float:right;">
+        <a href="{{ post.get_absolute_url_to_new_comment}}" class="btn btn-primary">Comment</a>
+      </span>
+      </p>
+    </div>
+</div>
+
+<!--Comments-->
+{% for comment in post.get_comments_list %}
+  <div class="row">
+    <div class="col-2 text-center">
+    </div>
+    <div class="col-10">
+        <div class="card mb-4">
+        <div class="card-body ">
+          <p class="card-text">{{ comment.comment_body }}</p>
+        </div>
+        <div class="card-footer text-muted">
+          <p>
+            <img class="rounded-circle" src="{{comment.author.profile.image.url}}" height="40" width="40">
+            Commented on {{ comment.date_commented }} by <a href="#">{{ comment.author }}</a>
+            {% if comment.author == user %}
+              <a href="{{ comment.get_absolute_url_to_update}}" class="btn btn-dark">Edit</a>
+              <a href="{{ comment.get_absolute_url_to_delete }}" class="btn btn-danger">Delete</a>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}
